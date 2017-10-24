@@ -47,6 +47,8 @@ class APM:
         self.cy = random.randint(50, 550)
         self.cv.destroy()
         self.cv = Canvas(self.frame0, width=800, height=600)
+        self.d = self.cv.create_oval((self.cx-R, self.cy-R, self.cx+R, self.cy+R), fill='black')
+        
         self.cv.bind('<Button-1>', self.change)
         self.cv.pack()
 
